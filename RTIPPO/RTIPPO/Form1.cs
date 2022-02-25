@@ -44,7 +44,14 @@ namespace RTIPPO
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            Console.WriteLine('d');
+            
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Authorization formAuthorization = new Authorization();
+            formAuthorization.Show();
+            this.Hide();
         }
     }
 }

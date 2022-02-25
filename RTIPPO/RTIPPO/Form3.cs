@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace RTIPPO
 {
-    public partial class Form3 : Form
+    public partial class Registration : Form
     {
-        public Form3()
+        public Registration()
         {
             InitializeComponent();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Authorization formAuthorization = new Authorization();
+            formAuthorization.Show();
+            this.Hide();
         }
     }
 }

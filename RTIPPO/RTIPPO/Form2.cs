@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RTIPPO
 {
-    public partial class Form2 : Form
+    public partial class Authorization : Form
     {
-        public Form2()
+        public Authorization()
         {
             InitializeComponent();
         }
@@ -30,6 +30,20 @@ namespace RTIPPO
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Registration formRegistration = new Registration();
+            formRegistration.Show();
+            this.Hide();
+        }
+
+        private void доскаОбъявленийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BulletinBoard formBB = new BulletinBoard();
+            formBB.Show();
+            this.Hide();
         }
     }
 }
