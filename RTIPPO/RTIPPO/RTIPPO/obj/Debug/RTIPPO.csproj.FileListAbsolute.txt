@@ -1,0 +1,10 @@
+D:\RTIPPO\RTIPPO\RTIPPO\bin\Debug\RTIPPO.exe.config
+D:\RTIPPO\RTIPPO\RTIPPO\bin\Debug\RTIPPO.exe
+D:\RTIPPO\RTIPPO\RTIPPO\bin\Debug\RTIPPO.pdb
+D:\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.AssemblyReference.cache
+D:\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.BulletinBoard.resources
+D:\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Properties.Resources.resources
+D:\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.GenerateResource.cache
+D:\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.CoreCompileInputs.cache
+D:\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.exe
+D:\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.pdb
