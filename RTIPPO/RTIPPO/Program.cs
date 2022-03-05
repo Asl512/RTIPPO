@@ -16,7 +16,7 @@ namespace RTIPPO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BulletinBoard());
+            Application.Run(new BulletinBoard(false));
         }
     }
 }

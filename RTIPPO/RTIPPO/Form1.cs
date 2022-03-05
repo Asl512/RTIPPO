@@ -12,14 +12,31 @@ namespace RTIPPO
 {
     public partial class BulletinBoard : Form
     {
-        public BulletinBoard()
+        public bool auth = false;
+        public BulletinBoard(bool auth)
         {
+            this.auth = auth;
             InitializeComponent();
+            if(!auth)
+            {
+                ButtonPlace.Text = "Войти";
+                menuStrip1.Visible = false;
+            }
+            else
+            {
+                ButtonPlace.Text = "Подать объявление";
+                menuStrip1.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (!auth)
+            {
+                Authorization formAuthorization = new Authorization();
+                formAuthorization.Show();
+                this.Hide();
+            }
         }
 
         private void BulletinBoard_Load(object sender, EventArgs e)
@@ -52,6 +69,11 @@ namespace RTIPPO
             Authorization formAuthorization = new Authorization();
             formAuthorization.Show();
             this.Hide();
+        }
+
+        private void dataGridMissing_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -33,8 +33,8 @@ namespace RTIPPO
             this.b = new System.ComponentModel.BackgroundWorker();
             this.buttonRegistrion = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textLogin = new System.Windows.Forms.TextBox();
+            this.textPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -78,27 +78,28 @@ namespace RTIPPO
             this.button2.TabIndex = 2;
             this.button2.Text = "Войти";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // textLogin
             // 
-            this.textBox1.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(262, 136);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 26);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textLogin.BackColor = System.Drawing.Color.SeaShell;
+            this.textLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textLogin.Location = new System.Drawing.Point(262, 136);
+            this.textLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textLogin.Name = "textLogin";
+            this.textLogin.Size = new System.Drawing.Size(179, 26);
+            this.textLogin.TabIndex = 3;
+            this.textLogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textPassword
             // 
-            this.textBox2.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.Location = new System.Drawing.Point(262, 192);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 26);
-            this.textBox2.TabIndex = 4;
+            this.textPassword.BackColor = System.Drawing.Color.SeaShell;
+            this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textPassword.Location = new System.Drawing.Point(262, 192);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(179, 26);
+            this.textPassword.TabIndex = 4;
             // 
             // label2
             // 
@@ -146,8 +147,8 @@ namespace RTIPPO
             this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textPassword);
+            this.Controls.Add(this.textLogin);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonRegistrion);
             this.Controls.Add(this.label1);
@@ -170,8 +171,8 @@ namespace RTIPPO
         private System.ComponentModel.BackgroundWorker b;
         private System.Windows.Forms.Button buttonRegistrion;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textLogin;
+        private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MenuStrip menuStrip1;
