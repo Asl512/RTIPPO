@@ -20,3 +20,16 @@ D:\gitRTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.CoreCompileInputs.cache
 D:\gitRTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.exe
 D:\gitRTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.pdb
 D:\gitRTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Registration.resources
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\bin\Debug\RTIPPO.exe.config
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\bin\Debug\RTIPPO.exe
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\bin\Debug\RTIPPO.pdb
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.AssemblyReference.cache
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.BulletinBoard.resources
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Authorization.resources
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Registration.resources
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Form4.resources
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Properties.Resources.resources
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.GenerateResource.cache
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.CoreCompileInputs.cache
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.exe
+C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.pdb

@@ -27,6 +27,8 @@ namespace RTIPPO
                 ButtonPlace.Text = "Подать объявление";
                 menuStrip1.Visible = true;
             }
+            dataGridMissing.Rows.Add("Барсик", "Кошка", "М", "Тюмень", "12.02.2022");
+            dataGridMissing.Rows.Add("Ласточка", "Собака", "Ж", "Тюмень", "22.02.2022");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,6 +74,20 @@ namespace RTIPPO
         }
 
         private void dataGridMissing_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            var name = (String)dataGridMissing[0, row].Value;
+            var category = (String)dataGridMissing[1, row].Value;
+            var gender = (String)dataGridMissing[2, row].Value;
+            var location = (String)dataGridMissing[3,row].Value;
+            var date = (String)dataGridMissing[4,row].Value;
+
+            Form4 form4 = new Form4(name, gender, location, date, category);
+            form4.Show();
+            this.Hide();
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
