@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace RTIPPO
 {
@@ -15,8 +16,11 @@ namespace RTIPPO
         public bool auth = false;
         public BulletinBoard(bool auth)
         {
-            this.auth = auth;
             InitializeComponent();
+            DataBase db = new DataBase("SELECT date AS Дата, animals.name AS Кличка, category.name AS Категория, gender.name AS Гендер,users.login AS Пользователь, location.name AS Город FROM records INNER JOIN location ON location.id = records.id_location INNER JOIN users ON users.id = records.id_user INNER JOIN animals ON animals.id = records.id_animal INNER JOIN category ON category.id = animals.id_category INNER JOIN gender ON gender.id = animals.id_gender");
+            dataGridMissing.DataSource = db.data;
+
+            this.auth = auth;
             if(!auth)
             {
                 ButtonPlace.Text = "Войти";
@@ -27,8 +31,6 @@ namespace RTIPPO
                 ButtonPlace.Text = "Подать объявление";
                 menuStrip1.Visible = true;
             }
-            dataGridMissing.Rows.Add("Барсик", "Кошка", "М", "Тюмень", "12.02.2022");
-            dataGridMissing.Rows.Add("Ласточка", "Собака", "Ж", "Тюмень", "22.02.2022");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,7 +77,7 @@ namespace RTIPPO
 
         private void dataGridMissing_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int row = e.RowIndex;
+            /*int row = e.RowIndex;
             var name = (String)dataGridMissing[0, row].Value;
             var category = (String)dataGridMissing[1, row].Value;
             var gender = (String)dataGridMissing[2, row].Value;
@@ -83,8 +85,8 @@ namespace RTIPPO
             var date = (String)dataGridMissing[4,row].Value;
 
             Form4 form4 = new Form4(name, gender, location, date, category);
-            form4.Show();
-            this.Hide();
+            form4.ShowDialog();
+            this.Hide();*/
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

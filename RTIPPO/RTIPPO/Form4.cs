@@ -57,7 +57,7 @@ namespace RTIPPO
         {
             BulletinBoard formBB = new BulletinBoard(false);
             formBB.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

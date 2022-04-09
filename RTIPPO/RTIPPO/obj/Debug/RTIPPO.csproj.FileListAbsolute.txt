@@ -33,3 +33,32 @@ C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug
 C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.CoreCompileInputs.cache
 C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.exe
 C:\Users\Алина\OneDrive\Рабочий стол\GIT\RTIPPO\RTIPPO\obj\Debug\RTIPPO.pdb
+D:\gitRTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Form4.resources
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\Npgsql.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Buffers.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Collections.Immutable.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Memory.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Numerics.Vectors.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Text.Encodings.Web.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Text.Json.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Threading.Channels.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.ValueTuple.dll
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\Npgsql.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Buffers.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Collections.Immutable.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Memory.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Numerics.Vectors.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Text.Encodings.Web.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Text.Json.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Threading.Channels.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\gitRTIPPO\RTIPPO\RTIPPO\bin\Debug\System.ValueTuple.xml
