@@ -9,7 +9,7 @@ namespace RTIPPO.repositories
 {
     class RecordRepository
     {
-        DataTable getAll()
+        public DataTable getAll()
         {
             DataBase db = new DataBase("SELECT date AS Дата, " +
                 "animals.name AS Кличка, " +
@@ -26,7 +26,7 @@ namespace RTIPPO.repositories
             return db.data;
         }
 
-        DataTable getOne(int id)
+        public DataTable getOne(int id)
         {
             DataBase db = new DataBase("SELECT date AS Дата, " +
                 "animals.name AS Кличка, " +

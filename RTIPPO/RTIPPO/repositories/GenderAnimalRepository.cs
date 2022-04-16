@@ -9,7 +9,7 @@ namespace RTIPPO.repositories
 {
     class GenderAnimalRepository
     {
-        DataTable getAll()
+        public DataTable getAll()
         {
             DataBase db = new DataBase("SELECT id, name FROM gender");
             return db.data;
