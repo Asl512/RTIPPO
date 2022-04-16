@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 using RTIPPO.repositories;
 
 namespace RTIPPO
@@ -20,7 +19,6 @@ namespace RTIPPO
             InitializeComponent();
             RecordRepository records = new RecordRepository();
             dataGridMissing.DataSource = records.getAll();
-            textBox1.Text = records.getOne(1).ToString();
 
             this.auth = auth;
             if(!auth)
