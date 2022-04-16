@@ -14,7 +14,7 @@ namespace RTIPPO
 
         public DataBase(string request)
         {
-            NpgsqlConnection connector = new NpgsqlConnection("Server=localhost;Port=5432;Database=rtippo;User Id=postgres;Password=1122;");
+            NpgsqlConnection connector = new NpgsqlConnection("Server=localhost;Port=5432;Database=rtippo;User Id=postgres;Password=2001;");
             connector.Open();
             NpgsqlCommand command = new NpgsqlCommand();
             command.Connection = connector;
