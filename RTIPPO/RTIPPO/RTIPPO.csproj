@@ -91,6 +91,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\Animal_Model.cs" />
+    <Compile Include="models\Status_Model.cs" />
+    <Compile Include="models\User_Model.cs" />
     <Compile Include="network\DataBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
