@@ -9,6 +9,19 @@ namespace RTIPPO.repositories
 {
     class UserRepository
     {
+        private bool auth;
+        public bool checkIsLogginIn()
+        {
+            if (auth)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public DataTable getUser(String login)
         {
             DataBase db = new DataBase("SELECT login,password,status.name," +
