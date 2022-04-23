@@ -9,7 +9,34 @@ namespace RTIPPO.repositories
 {
     class UserRepository
     {
-        private bool auth;
+        private bool auth=false;
+        public bool enter(string login, string password)
+        {
+            if (login == "" || password=="")
+            {
+                return false;
+            }
+            else
+            {
+                auth=true;
+                return true;
+            }
+        }
+
+        private bool reg = false;
+        public bool registration(string login, string password, int location)
+        {
+            if (login == "" || password == "")
+            {
+                return false;
+            }
+            else
+            {
+                reg = true;
+                return true;
+            }
+        }
+
         public bool checkIsLogginIn()
         {
             if (auth)
