@@ -18,7 +18,7 @@ namespace RTIPPO
         {
             InitializeComponent();
             RecordRepository records = new RecordRepository();
-            dataGridMissing.DataSource = records.getAll();
+            dataGridMissing.DataSource = records.getRecords();
 
             this.auth = auth;
             if(!auth)
