@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RTIPPO.repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ namespace RTIPPO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BulletinBoard(false));
+            UserRepository ur = new UserRepository();
+            Application.Run(new BulletinBoard(ur));
         }
     }
 }

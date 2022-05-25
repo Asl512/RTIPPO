@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace RTIPPO.repositories
 {
-    class UserRepository
+    public class UserRepository
     {
-        private bool auth=false;
+        private bool auth = false;
         public bool enter(string login, string password)
         {
-            if (login == "" || password=="")
+            if (login == "" || password == "")
             {
                 return false;
             }
             else
             {
-                auth=true;
+                auth = true;
                 return true;
             }
         }
@@ -39,25 +39,12 @@ namespace RTIPPO.repositories
 
         public bool checkIsLogginIn()
         {
-            if (auth)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return auth;
         }
 
-        public DataTable getUser(String login)
+        public void logout()
         {
-            DataBase db = new DataBase("SELECT login,password,status.name," +
-            "location.name AS Город" +
-            "FROM users" +
-            "INNER JOIN location ON location.id = users.id_location" +
-            "INNER JOIN status ON status.id = users.id_status" +
-            "WHERE login = '" + login + "'");
-            return db.data;
+            auth = false;
         }
     }
 }

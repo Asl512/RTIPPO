@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RTIPPO.repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace RTIPPO
 {
     public partial class Authorization : Form
     {
+        UserRepository userRepository;
         public Authorization()
         {
             InitializeComponent();
+            userRepository = new UserRepository();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -41,16 +44,17 @@ namespace RTIPPO
 
         private void доскаОбъявленийToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BulletinBoard formBB = new BulletinBoard(false);
+            BulletinBoard formBB = new BulletinBoard(userRepository);
             formBB.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(textLogin.Text != "" && textPassword.Text != "")
+            bool status = userRepository.enter(textLogin.Text, textPassword.Text);
+            if(status)
             {
-                BulletinBoard formBB = new BulletinBoard(true);
+                BulletinBoard formBB = new BulletinBoard(userRepository);
                 formBB.Show();
                 this.Hide();
             }
@@ -59,7 +63,6 @@ namespace RTIPPO
                 string message = "Введите логин и пароль";
                 string caption = "Ошибка валидации";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
-
                 MessageBox.Show(message, caption, buttons);
             }
         }

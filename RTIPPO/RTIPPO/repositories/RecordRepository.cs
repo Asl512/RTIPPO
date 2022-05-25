@@ -9,12 +9,7 @@ namespace RTIPPO.repositories
 {
     class RecordRepository
     {
-        public DataTable record;
-        public void enter(int id)
-        {
-            record = record;
-        }
-        public void getAll()
+        public DataTable getRecords()
         {
             DataBase db = new DataBase("SELECT date AS Дата, " +
                 "animals.name AS Кличка, " +
@@ -28,17 +23,7 @@ namespace RTIPPO.repositories
                 "INNER JOIN animals ON animals.id = records.id_animal " +
                 "INNER JOIN category ON category.id = animals.id_category " +
                 "INNER JOIN gender ON gender.id = animals.id_gender");
-            record =  db.data;
-        }
-
-        public void soringRecords(string column)
-        {
-            record = record;
-        }
-
-        public void filterRecords(DateTime afterDate, DateTime beaforeDate, string location, string gender, string category)
-        {
-            record = record;
+            return db.data;
         }
     }
 }
