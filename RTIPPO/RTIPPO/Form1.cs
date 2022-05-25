@@ -13,14 +13,16 @@ namespace RTIPPO
 {
     public partial class BulletinBoard : Form
     {
-        public bool auth = false;
-        public BulletinBoard(bool auth)
+        public bool auth;
+        public UserRepository userRepository;
+        public BulletinBoard()
         {
             InitializeComponent();
-            RecordRepository records = new RecordRepository();
-            dataGridMissing.DataSource = records.getRecords();
+            RecordRepository recordsRepository = new RecordRepository();
+            dataGridMissing.DataSource = recordsRepository.getRecords();
 
-            this.auth = auth;
+            userRepository = new UserRepository();
+            this.auth = userRepository.checkIsLogginIn();
             if(!auth)
             {
                 ButtonPlace.Text = "Войти";
@@ -31,6 +33,7 @@ namespace RTIPPO
                 ButtonPlace.Text = "Подать объявление";
                 menuStrip1.Visible = true;
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,6 +75,7 @@ namespace RTIPPO
         {
             Authorization formAuthorization = new Authorization();
             formAuthorization.Show();
+            userRepository.logout();
             this.Hide();
         }
 
@@ -96,6 +100,11 @@ namespace RTIPPO
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

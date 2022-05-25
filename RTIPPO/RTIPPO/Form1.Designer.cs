@@ -31,7 +31,6 @@ namespace RTIPPO
         {
             this.ButtonPlace = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@ namespace RTIPPO
             this.buttonLayut = new System.Windows.Forms.ToolStripMenuItem();
             this.myRecords = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridMissing = new System.Windows.Forms.DataGridView();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMissing)).BeginInit();
             this.SuspendLayout();
@@ -74,29 +74,21 @@ namespace RTIPPO
             this.label1.Text = "Доска объявлений о находке";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(557, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 22);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(554, 114);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 18);
+            this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Населенный пункт:";
+            this.label4.Text = "Город:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(554, 184);
+            this.label5.Location = new System.Drawing.Point(554, 172);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 18);
             this.label5.TabIndex = 6;
@@ -120,7 +112,7 @@ namespace RTIPPO
             this.comboBox1.Items.AddRange(new object[] {
             "Кошка ",
             "Собака"});
-            this.comboBox1.Location = new System.Drawing.Point(557, 225);
+            this.comboBox1.Location = new System.Drawing.Point(557, 193);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(238, 24);
             this.comboBox1.TabIndex = 11;
@@ -207,11 +199,21 @@ namespace RTIPPO
             this.dataGridMissing.TabIndex = 2;
             this.dataGridMissing.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMissing_CellContentClick);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(616, 113);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(179, 24);
+            this.comboBox2.TabIndex = 18;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // BulletinBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 470);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.dataGridMissing);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.label7);
@@ -222,7 +224,6 @@ namespace RTIPPO
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ButtonPlace);
             this.Controls.Add(this.menuStrip1);
@@ -241,7 +242,6 @@ namespace RTIPPO
 
         private System.Windows.Forms.Button ButtonPlace;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
@@ -255,6 +255,7 @@ namespace RTIPPO
         private System.Windows.Forms.ToolStripMenuItem buttonLayut;
         private System.Windows.Forms.ToolStripMenuItem myRecords;
         private System.Windows.Forms.DataGridView dataGridMissing;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 

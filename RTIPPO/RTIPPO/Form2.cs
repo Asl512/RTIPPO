@@ -41,7 +41,7 @@ namespace RTIPPO
 
         private void доскаОбъявленийToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BulletinBoard formBB = new BulletinBoard(false);
+            BulletinBoard formBB = new BulletinBoard();
             formBB.Show();
             this.Hide();
         }
@@ -50,7 +50,7 @@ namespace RTIPPO
         {
             if(textLogin.Text != "" && textPassword.Text != "")
             {
-                BulletinBoard formBB = new BulletinBoard(true);
+                BulletinBoard formBB = new BulletinBoard();
                 formBB.Show();
                 this.Hide();
             }
@@ -59,7 +59,6 @@ namespace RTIPPO
                 string message = "Введите логин и пароль";
                 string caption = "Ошибка валидации";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
-
                 MessageBox.Show(message, caption, buttons);
             }
         }
