@@ -9,6 +9,7 @@ namespace RTIPPO.repositories
 {
     class UserRepository
     {
+
         private bool auth=false;
         public bool enter(string login, string password)
         {
@@ -18,22 +19,23 @@ namespace RTIPPO.repositories
             }
             else
             {
-                auth=true;
+                //DataBase base = new DataBase('select ');
+                auth =true;
                 return true;
+                
             }
+            
         }
 
-        private bool reg = false;
-        public bool registration(string login, string password, int location)
+        public string registration(string login, string password, int location)
         {
             if (login == "" || password == "")
             {
-                return false;
+                return "Введите логин и парооль";
             }
             else
             {
-                reg = true;
-                return true;
+                return "";
             }
         }
 
