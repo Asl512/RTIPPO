@@ -14,15 +14,15 @@ namespace RTIPPO
     public partial class BulletinBoard : Form
     {
         public bool auth;
-        public UserRepository userRepository;
-        public BulletinBoard()
+        UserRepository userRepository;
+        public BulletinBoard(UserRepository userRepository)
         {
             InitializeComponent();
             RecordRepository recordsRepository = new RecordRepository();
             dataGridMissing.DataSource = recordsRepository.getRecords();
 
-            userRepository = new UserRepository();
-            this.auth = userRepository.checkIsLogginIn();
+            this.userRepository = userRepository;
+            auth = this.userRepository.checkIsLogginIn();
             if(!auth)
             {
                 ButtonPlace.Text = "Войти";
@@ -89,8 +89,7 @@ namespace RTIPPO
             var date = (String)dataGridMissing[4,row].Value;
 
             Form4 form4 = new Form4(name, gender, location, date, category);
-            form4.ShowDialog();
-            this.Hide();*/
+            form4.ShowDialog();*/
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

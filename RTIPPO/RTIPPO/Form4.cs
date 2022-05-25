@@ -55,8 +55,6 @@ namespace RTIPPO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BulletinBoard formBB = new BulletinBoard();
-            formBB.Show();
             this.Close();
         }
     }

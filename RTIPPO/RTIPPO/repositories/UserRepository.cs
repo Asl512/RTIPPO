@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RTIPPO.repositories
 {
-    class UserRepository
+    public class UserRepository
     {
         private bool auth = false;
         public bool enter(string login, string password)
