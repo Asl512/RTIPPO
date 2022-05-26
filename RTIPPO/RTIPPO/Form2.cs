@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RTIPPO.repositories;
 
 namespace RTIPPO
 {
@@ -48,15 +49,18 @@ namespace RTIPPO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(textLogin.Text != "" && textPassword.Text != "")
+            BulletinBoard board = new BulletinBoard(true);
+            UserRepository userRepository = new UserRepository();
+
+            string status = userRepository.enter(textLogin.Text, textPassword.Text);
+            if (status == "")
             {
-                BulletinBoard formBB = new BulletinBoard(true);
-                formBB.Show();
-                this.Hide();
+                board.Show();
+                Hide();
             }
             else
             {
-                string message = "Введите логин и пароль";
+                string message = status;
                 string caption = "Ошибка валидации";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
 

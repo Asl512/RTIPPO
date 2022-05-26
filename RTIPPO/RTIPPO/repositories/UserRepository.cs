@@ -11,27 +11,33 @@ namespace RTIPPO.repositories
     {
 
         private bool auth=false;
-        public bool enter(string login, string password)
+        public string enter(string login, string password)
         {
             if (login == "" || password=="")
             {
-                return false;
+                return "Введите логин и пароль";
             }
             else
             {
-
-                auth =true;
-                return true;
-                
+                DataBase dbLog = new DataBase("select login, password from users");
+                foreach (DataRow row in dbLog.data.Rows)
+                {
+                    var cells = row.ItemArray;
+                        if (cells[0].ToString().Trim() == login.Trim() && cells[1].ToString().Trim() == password.Trim())
+                        {
+                            auth = true;
+                            return "";
+                        }
+                }
+                return "Пользователь с такими данными не зарегистрирован";
             }
-            
         }
 
         public string registration(string login, string password, int location)
         {
             if (login == "" || password == "")
             {
-                return "Введите логин и парооль";
+                return "Введите логин и пароль";
             }
             else
             {
@@ -48,7 +54,7 @@ namespace RTIPPO.repositories
                         }
                     }
                 }
-                new DataBase("INSERT INTO public.users(id_location, password, login, id_status) VALUES(0, '"+password+"', '"+login+"', 0)");
+                new DataBase("INSERT INTO public.users(id_location, password, login) VALUES("+location+", '"+password+"', '"+login+"')");
                 auth= true;
                 return "";
             }

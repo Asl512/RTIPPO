@@ -16,6 +16,13 @@ namespace RTIPPO
         public Registration()
         {
             InitializeComponent();
+            LocationRepository locationRepository = new LocationRepository();
+            DataTable location = locationRepository.getAll();
+            foreach (DataRow row in location.Rows)
+            {
+                var cells = row.ItemArray;
+                comboBox1.Items.Add(cells[1]);
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -27,13 +34,27 @@ namespace RTIPPO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BulletinBoard board = new BulletinBoard(true);
+            Authorization formAuthorization = new Authorization();
+            formAuthorization.Show();
             UserRepository userRepository = new UserRepository();
-
-            string status = userRepository.registration(loginBoxR.Text, passwordBoxR.Text, 0);
+            DataBase db = new DataBase("select id, name from location");
+            int location = 1;
+            foreach (DataRow row in db.data.Rows)
+            {
+                var cells = row.ItemArray;
+                if (cells[1].ToString().Trim() == comboBox1.SelectedItem.ToString())
+                {
+                    location = Int32.Parse(cells[0].ToString());
+                }
+                else 
+                {
+                    location++;
+                }
+            }
+            string status = userRepository.registration(loginBoxR.Text, passwordBoxR.Text, location);
             if (status =="") 
-            { 
-                board.Show(); 
+            {
+                formAuthorization.Show(); 
                 Hide(); 
             }
             else 

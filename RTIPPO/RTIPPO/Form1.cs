@@ -77,7 +77,7 @@ namespace RTIPPO
 
         private void dataGridMissing_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*int row = e.RowIndex;
+            int row = e.RowIndex;
             var name = (String)dataGridMissing[0, row].Value;
             var category = (String)dataGridMissing[1, row].Value;
             var gender = (String)dataGridMissing[2, row].Value;
@@ -86,7 +86,7 @@ namespace RTIPPO
 
             Form4 form4 = new Form4(name, gender, location, date, category);
             form4.ShowDialog();
-            this.Hide();*/
+            this.Hide();
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
