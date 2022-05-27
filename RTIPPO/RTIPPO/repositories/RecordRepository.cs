@@ -15,7 +15,8 @@ namespace RTIPPO.repositories
         {
 
             DataBase db = new DataBase(
-                "SELECT date AS Дата, " +
+                "SELECT records.id AS Номер, " +
+                "date AS Дата, " +
                 "animals.name AS Кличка, " +
                 "category.name AS Категория, " +
                 "gender.name AS Пол," +
@@ -121,6 +122,25 @@ namespace RTIPPO.repositories
                 where += "(date <= '" + dateBeafor + "') ";
             }
             return where;
+        }
+        public DataTable getOne(string index)
+        {
+            DataBase db = new DataBase(
+               "SELECT date , "+
+               "animals.name, "+
+               "category.name , " +
+               "gender.name , " +
+               "location.name, " +
+               "animals.photo " +
+               "FROM records " +
+               "INNER JOIN location ON location.id = records.id_location " +
+               "INNER JOIN users ON users.id = records.id_user " +
+               "INNER JOIN animals ON animals.id = records.id_animal " +
+               "INNER JOIN category ON category.id = animals.id_category " +
+               "INNER JOIN gender ON gender.id = animals.id_gender " +
+               "where records.id = "+index);
+            return db.data;
+
         }
     }
 }

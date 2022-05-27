@@ -144,18 +144,13 @@ namespace RTIPPO
 
         private void dataGridMissing_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*int row = e.RowIndex;
-            var name = (String)dataGridMissing[0, row].Value;
-            var category = (String)dataGridMissing[1, row].Value;
-            var gender = (String)dataGridMissing[2, row].Value;
-            var location = (String)dataGridMissing[3,row].Value;
-            var date = (String)dataGridMissing[4,row].Value;
-
-            Form4 form4 = new Form4(name, gender, location, date, category);
+            string index = dataGridMissing.SelectedCells[0].Value.ToString();
+            //MessageBox.Show(s.ToString());
+            Form4 form4 = new Form4(index);
             form4.ShowDialog();
-            this.Hide();*/
+       
         }
-
+        
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
