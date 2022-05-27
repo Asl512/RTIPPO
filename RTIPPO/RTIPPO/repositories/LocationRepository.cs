@@ -9,7 +9,7 @@ namespace RTIPPO.repositories
 {
     class LocationRepository
     {
-        public DataTable getAll()
+    public DataTable getAll()
         {
             DataBase db = new DataBase("SELECT id, name FROM location");
             return db.data;

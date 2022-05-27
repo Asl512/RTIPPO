@@ -12,11 +12,7 @@ namespace RTIPPO
 {
     public partial class Form4 : Form
     {
-        //public string name;
-        //public string gender;
-        //public string location;
-        //public string date;
-        //public string category;
+        //readonly DataBase db = new DataBase("select * from users");
 
         public Form4(string name, string gender, string location, string date, string category)
         {

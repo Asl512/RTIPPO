@@ -9,31 +9,54 @@ namespace RTIPPO.repositories
 {
     public class UserRepository
     {
-        private bool auth = false;
-        public bool enter(string login, string password)
+
+        private bool auth=false;
+        public string enter(string login, string password)
         {
             if (login == "" || password == "")
             {
-                return false;
+                return "Введите логин и пароль";
             }
             else
             {
-                auth = true;
-                return true;
+                DataBase dbLog = new DataBase("select login, password from users");
+                foreach (DataRow row in dbLog.data.Rows)
+                {
+                    var cells = row.ItemArray;
+                        if (cells[0].ToString().Trim() == login.Trim() && cells[1].ToString().Trim() == password.Trim())
+                        {
+                            auth = true;
+                            return "";
+                        }
+                }
+                return "Пользователь с такими данными не зарегистрирован";
             }
         }
 
-        private bool reg = false;
-        public bool registration(string login, string password, int location)
+        public string registration(string login, string password, int location)
         {
             if (login == "" || password == "")
             {
-                return false;
+                return "Введите логин и пароль";
             }
             else
             {
-                reg = true;
-                return true;
+                DataBase db = new DataBase("select login from users");
+                foreach (DataRow row in db.data.Rows)
+                {
+                    var cells = row.ItemArray;
+                    foreach (object cell in cells)
+                    {
+                        Console.Write("\t{0}", cell);
+                        if (cell.ToString().Trim() == login.Trim())
+                        {
+                            return "Пользователь с таким логином уже существует";
+                        }
+                    }
+                }
+                new DataBase("INSERT INTO public.users(id_location, password, login) VALUES("+location+", '"+password+"', '"+login+"')");
+                auth= true;
+                return "";
             }
         }
 
