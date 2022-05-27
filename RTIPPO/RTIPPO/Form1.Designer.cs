@@ -33,7 +33,6 @@ namespace RTIPPO
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.dateBeafor = new System.Windows.Forms.DateTimePicker();
@@ -45,6 +44,15 @@ namespace RTIPPO
             this.myRecords = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridMissing = new System.Windows.Forms.DataGridView();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateSortButton = new System.Windows.Forms.Button();
+            this.nameSortButton = new System.Windows.Forms.Button();
+            this.categorySortButton = new System.Windows.Forms.Button();
+            this.genderSortButton = new System.Windows.Forms.Button();
+            this.userSortButton = new System.Windows.Forms.Button();
+            this.locationSortButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMissing)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +86,7 @@ namespace RTIPPO
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(554, 114);
+            this.label4.Location = new System.Drawing.Point(554, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 5;
@@ -88,21 +96,11 @@ namespace RTIPPO
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(554, 172);
+            this.label5.Location = new System.Drawing.Point(554, 186);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Категори:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(556, 271);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 18);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Дата:";
             // 
             // comboBox1
             // 
@@ -110,12 +108,12 @@ namespace RTIPPO
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Кошка ",
-            "Собака"});
-            this.comboBox1.Location = new System.Drawing.Point(557, 193);
+            "Все"});
+            this.comboBox1.Location = new System.Drawing.Point(645, 185);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 24);
+            this.comboBox1.Size = new System.Drawing.Size(152, 24);
             this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dateFrom
             // 
@@ -131,6 +129,7 @@ namespace RTIPPO
             this.dateBeafor.Name = "dateBeafor";
             this.dateBeafor.Size = new System.Drawing.Size(143, 22);
             this.dateBeafor.TabIndex = 13;
+            this.dateBeafor.ValueChanged += new System.EventHandler(this.dateBeafor_ValueChanged);
             // 
             // label6
             // 
@@ -191,28 +190,129 @@ namespace RTIPPO
             // dataGridMissing
             // 
             this.dataGridMissing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMissing.Location = new System.Drawing.Point(22, 123);
+            this.dataGridMissing.Location = new System.Drawing.Point(12, 142);
             this.dataGridMissing.Name = "dataGridMissing";
             this.dataGridMissing.RowHeadersWidth = 51;
             this.dataGridMissing.RowTemplate.Height = 24;
-            this.dataGridMissing.Size = new System.Drawing.Size(509, 311);
+            this.dataGridMissing.Size = new System.Drawing.Size(536, 292);
             this.dataGridMissing.TabIndex = 2;
             this.dataGridMissing.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMissing_CellContentClick);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(616, 113);
+            this.comboBox2.Items.AddRange(new object[] {
+            "Все"});
+            this.comboBox2.Location = new System.Drawing.Point(645, 142);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(179, 24);
+            this.comboBox2.Size = new System.Drawing.Size(150, 24);
             this.comboBox2.TabIndex = 18;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(556, 271);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 18);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Дата:";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Все"});
+            this.comboBox3.Location = new System.Drawing.Point(645, 221);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(150, 24);
+            this.comboBox3.TabIndex = 19;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(554, 221);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 18);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Пол:";
+            // 
+            // dateSortButton
+            // 
+            this.dateSortButton.Location = new System.Drawing.Point(11, 103);
+            this.dateSortButton.Name = "dateSortButton";
+            this.dateSortButton.Size = new System.Drawing.Size(74, 33);
+            this.dateSortButton.TabIndex = 21;
+            this.dateSortButton.Text = "Дата ↓";
+            this.dateSortButton.UseVisualStyleBackColor = true;
+            this.dateSortButton.Click += new System.EventHandler(this.dateSortButton_Click);
+            // 
+            // nameSortButton
+            // 
+            this.nameSortButton.Location = new System.Drawing.Point(91, 103);
+            this.nameSortButton.Name = "nameSortButton";
+            this.nameSortButton.Size = new System.Drawing.Size(85, 33);
+            this.nameSortButton.TabIndex = 22;
+            this.nameSortButton.Text = "Кличка ↓";
+            this.nameSortButton.UseVisualStyleBackColor = true;
+            this.nameSortButton.Click += new System.EventHandler(this.nameSortButton_Click);
+            // 
+            // categorySortButton
+            // 
+            this.categorySortButton.Location = new System.Drawing.Point(182, 103);
+            this.categorySortButton.Name = "categorySortButton";
+            this.categorySortButton.Size = new System.Drawing.Size(100, 33);
+            this.categorySortButton.TabIndex = 23;
+            this.categorySortButton.Text = "Категория ↓";
+            this.categorySortButton.UseVisualStyleBackColor = true;
+            this.categorySortButton.Click += new System.EventHandler(this.categorySortButton_Click);
+            // 
+            // genderSortButton
+            // 
+            this.genderSortButton.Location = new System.Drawing.Point(288, 103);
+            this.genderSortButton.Name = "genderSortButton";
+            this.genderSortButton.Size = new System.Drawing.Size(55, 33);
+            this.genderSortButton.TabIndex = 24;
+            this.genderSortButton.Text = "Пол ↓";
+            this.genderSortButton.UseVisualStyleBackColor = true;
+            this.genderSortButton.Click += new System.EventHandler(this.genderSortButton_Click);
+            // 
+            // userSortButton
+            // 
+            this.userSortButton.Location = new System.Drawing.Point(349, 103);
+            this.userSortButton.Name = "userSortButton";
+            this.userSortButton.Size = new System.Drawing.Size(125, 33);
+            this.userSortButton.TabIndex = 25;
+            this.userSortButton.Text = "Пользователь ↓";
+            this.userSortButton.UseVisualStyleBackColor = true;
+            this.userSortButton.Click += new System.EventHandler(this.userSortButton_Click);
+            // 
+            // locationSortButton
+            // 
+            this.locationSortButton.Location = new System.Drawing.Point(480, 103);
+            this.locationSortButton.Name = "locationSortButton";
+            this.locationSortButton.Size = new System.Drawing.Size(68, 33);
+            this.locationSortButton.TabIndex = 26;
+            this.locationSortButton.Text = "Город ↓";
+            this.locationSortButton.UseVisualStyleBackColor = true;
+            this.locationSortButton.Click += new System.EventHandler(this.locationSortButton_Click);
             // 
             // BulletinBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 470);
+            this.Controls.Add(this.locationSortButton);
+            this.Controls.Add(this.userSortButton);
+            this.Controls.Add(this.genderSortButton);
+            this.Controls.Add(this.categorySortButton);
+            this.Controls.Add(this.nameSortButton);
+            this.Controls.Add(this.dateSortButton);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.dataGridMissing);
             this.Controls.Add(this.buttonSubmit);
@@ -244,7 +344,6 @@ namespace RTIPPO
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker dateFrom;
         private System.Windows.Forms.DateTimePicker dateBeafor;
@@ -256,6 +355,15 @@ namespace RTIPPO
         private System.Windows.Forms.ToolStripMenuItem myRecords;
         private System.Windows.Forms.DataGridView dataGridMissing;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button dateSortButton;
+        private System.Windows.Forms.Button nameSortButton;
+        private System.Windows.Forms.Button categorySortButton;
+        private System.Windows.Forms.Button genderSortButton;
+        private System.Windows.Forms.Button userSortButton;
+        private System.Windows.Forms.Button locationSortButton;
     }
 }
 
