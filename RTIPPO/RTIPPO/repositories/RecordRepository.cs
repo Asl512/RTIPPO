@@ -10,7 +10,7 @@ namespace RTIPPO.repositories
     class RecordRepository
     {
         public DataTable getRecords(Sorting dateSort = Sorting.not, Sorting nameSort = Sorting.not, Sorting genderSort = Sorting.not, 
-            Sorting locationSort = Sorting.not, Sorting userSort = Sorting.not, Sorting categorySort = Sorting.not,
+            Sorting locationSort = Sorting.not, Sorting userSort = Sorting.not, Sorting categorySort = Sorting.not, ColumnSort lastColumnSort = ColumnSort.not,
             string location = null, string category = null, string gender = null, string dateFrom = null, string dateBeafor = null)
         {
 
@@ -28,37 +28,74 @@ namespace RTIPPO.repositories
                 "INNER JOIN category ON category.id = animals.id_category " +
                 "INNER JOIN gender ON gender.id = animals.id_gender " +
                 getWhere(location:location, category:category, gender: gender,dateFrom: dateFrom,dateBeafor: dateBeafor) +
-                getOrder(dateSort: dateSort, nameSort: nameSort, genderSort: genderSort, locationSort: locationSort, userSort: userSort, categorySort: categorySort)
+                getOrder(dateSort: dateSort, nameSort: nameSort, genderSort: genderSort, locationSort: locationSort, userSort: userSort, categorySort: categorySort, lastColumnSort: lastColumnSort)
                 );
             return db.data;
         }
 
-        private string getOrder(Sorting dateSort, Sorting nameSort, Sorting genderSort,Sorting locationSort, Sorting userSort, Sorting categorySort)
+        private string getOrder(Sorting dateSort, Sorting nameSort, Sorting genderSort,Sorting locationSort, Sorting userSort, Sorting categorySort, ColumnSort lastColumnSort)
         {
+            List<string> orderList = new List<string>();
+
+            switch (lastColumnSort)
+            {
+                case ColumnSort.date:
+                    orderList.Add("date " + statusOrder(dateSort));
+                    break;
+                case ColumnSort.name:
+                    orderList.Add("animals.name " + statusOrder(nameSort));
+                    break;
+                case ColumnSort.gender:
+                    orderList.Add("gender.name " + statusOrder(genderSort));
+                    break;
+                case ColumnSort.user:
+                    orderList.Add("users.login " + statusOrder(userSort));
+                    break;
+                case ColumnSort.category:
+                    orderList.Add("category.name " + statusOrder(categorySort));
+                    break;
+                case ColumnSort.location:
+                    orderList.Add("location.name " + statusOrder(locationSort));
+                    break;
+            }
+
+            if (genderSort != Sorting.not && lastColumnSort != ColumnSort.gender)
+            {
+                orderList.Add("gender.name " + statusOrder(genderSort));
+            }
+
+            if (categorySort != Sorting.not && lastColumnSort != ColumnSort.category)
+            {
+                orderList.Add("category.name " + statusOrder(categorySort));
+            }
+
+            if (locationSort != Sorting.not && lastColumnSort != ColumnSort.location)
+            {
+                orderList.Add("location.name " + statusOrder(locationSort));
+            }
+
+            if (dateSort != Sorting.not && lastColumnSort != ColumnSort.date)
+            {
+                orderList.Add("date " + statusOrder(dateSort));
+            }
+
+            if (nameSort != Sorting.not && lastColumnSort != ColumnSort.name)
+            {
+                orderList.Add("animals.name " + statusOrder(nameSort));
+            }
+
+            if (userSort != Sorting.not && lastColumnSort != ColumnSort.user)
+            {
+                orderList.Add("users.login " + statusOrder(userSort));
+            }
+
             string order = "";
-            void checkOrder()
+            if(orderList.Count > 0)
             {
-                if (order != "")
-                {
-                    order += ", ";
-                }
-                else
-                {
-                    order += "ORDER BY ";
-                }
+                order += "ORDER BY " + String.Join(", ", orderList.ToArray());
             }
+            Console.WriteLine(order);
 
-            if (dateSort != Sorting.not)
-            {
-                checkOrder();
-                order += "date " + statusOrder(dateSort);
-            }
-
-            if (nameSort != Sorting.not)
-            {
-                checkOrder();
-                order += "animals.name " + statusOrder(nameSort);
-            }
             return order;
         }
 

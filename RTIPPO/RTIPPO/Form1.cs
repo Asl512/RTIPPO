@@ -19,6 +19,17 @@ namespace RTIPPO
         not
     }
 
+    enum ColumnSort
+    {
+        user,
+        gender,
+        location,
+        date,
+        category,
+        name,
+        not
+    }
+
     public partial class BulletinBoard : Form
     {
         public bool auth;
@@ -36,6 +47,7 @@ namespace RTIPPO
         private Sorting locationSort = Sorting.not;
         private Sorting userSort = Sorting.not;
         private Sorting categorySort = Sorting.not;
+        private ColumnSort lastColumnSort = ColumnSort.not;
 
         public BulletinBoard(UserRepository userRepository)
         {
@@ -131,7 +143,7 @@ namespace RTIPPO
         {
             dataGridMissing.DataSource = recordsRepository.getRecords(location: location, category: category, gender: gender,
                 dateFrom: dateFromValue, dateBeafor:dateBeaforValue, dateSort: dateSort, nameSort: nameSort, genderSort: genderSort,
-                locationSort: locationSort, userSort: userSort, categorySort: categorySort);
+                locationSort: locationSort, userSort: userSort, categorySort: categorySort, lastColumnSort: lastColumnSort);
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -182,6 +194,7 @@ namespace RTIPPO
 
         private void dateSortButton_Click(object sender, EventArgs e)
         {
+            lastColumnSort = ColumnSort.date;
             if (dateSort == Sorting.descending || dateSort ==  Sorting.not)
             {
                 dateSort = Sorting.ascending;
@@ -197,6 +210,7 @@ namespace RTIPPO
 
         private void nameSortButton_Click(object sender, EventArgs e)
         {
+            lastColumnSort = ColumnSort.name;
             if (nameSort == Sorting.descending || nameSort == Sorting.not)
             {
                 nameSort = Sorting.ascending;
@@ -212,6 +226,7 @@ namespace RTIPPO
 
         private void categorySortButton_Click(object sender, EventArgs e)
         {
+            lastColumnSort = ColumnSort.category;
             if (categorySort == Sorting.descending || categorySort == Sorting.not)
             {
                 categorySort = Sorting.ascending;
@@ -227,6 +242,7 @@ namespace RTIPPO
 
         private void genderSortButton_Click(object sender, EventArgs e)
         {
+            lastColumnSort = ColumnSort.gender;
             if (genderSort == Sorting.descending || genderSort == Sorting.not)
             {
                 genderSort = Sorting.ascending;
@@ -242,6 +258,7 @@ namespace RTIPPO
 
         private void userSortButton_Click(object sender, EventArgs e)
         {
+            lastColumnSort = ColumnSort.user;
             if (userSort == Sorting.descending || userSort == Sorting.not)
             {
                 userSort = Sorting.ascending;
@@ -257,6 +274,7 @@ namespace RTIPPO
 
         private void locationSortButton_Click(object sender, EventArgs e)
         {
+            lastColumnSort = ColumnSort.location;
             if (locationSort == Sorting.descending || locationSort == Sorting.not)
             {
                 locationSort = Sorting.ascending;
