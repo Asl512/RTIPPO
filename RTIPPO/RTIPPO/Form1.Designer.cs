@@ -66,10 +66,9 @@ namespace RTIPPO
             this.ButtonPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ButtonPlace.ForeColor = System.Drawing.Color.Snow;
-            this.ButtonPlace.Location = new System.Drawing.Point(674, 48);
-            this.ButtonPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ButtonPlace.Location = new System.Drawing.Point(599, 38);
             this.ButtonPlace.Name = "ButtonPlace";
-            this.ButtonPlace.Size = new System.Drawing.Size(232, 41);
+            this.ButtonPlace.Size = new System.Drawing.Size(206, 33);
             this.ButtonPlace.TabIndex = 0;
             this.ButtonPlace.Text = "Подать объявления";
             this.ButtonPlace.UseVisualStyleBackColor = false;
@@ -79,7 +78,7 @@ namespace RTIPPO
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(112, 43);
+            this.label1.Location = new System.Drawing.Point(100, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(481, 39);
             this.label1.TabIndex = 2;
@@ -90,9 +89,9 @@ namespace RTIPPO
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(623, 178);
+            this.label4.Location = new System.Drawing.Point(554, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 22);
+            this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Город:";
             // 
@@ -100,9 +99,9 @@ namespace RTIPPO
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(623, 232);
+            this.label5.Location = new System.Drawing.Point(554, 186);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 22);
+            this.label5.Size = new System.Drawing.Size(94, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Категория:";
             // 
@@ -113,28 +112,25 @@ namespace RTIPPO
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Все"});
-            this.comboBox1.Location = new System.Drawing.Point(726, 231);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox1.Location = new System.Drawing.Point(657, 185);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 28);
+            this.comboBox1.Size = new System.Drawing.Size(172, 24);
             this.comboBox1.TabIndex = 11;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dateFrom
             // 
-            this.dateFrom.Location = new System.Drawing.Point(693, 388);
-            this.dateFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateFrom.Location = new System.Drawing.Point(599, 309);
             this.dateFrom.Name = "dateFrom";
-            this.dateFrom.Size = new System.Drawing.Size(160, 26);
+            this.dateFrom.Size = new System.Drawing.Size(230, 22);
             this.dateFrom.TabIndex = 12;
             this.dateFrom.ValueChanged += new System.EventHandler(this.dateFrom_ValueChanged);
             // 
             // dateBeafor
             // 
-            this.dateBeafor.Location = new System.Drawing.Point(693, 440);
-            this.dateBeafor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateBeafor.Location = new System.Drawing.Point(596, 351);
             this.dateBeafor.Name = "dateBeafor";
-            this.dateBeafor.Size = new System.Drawing.Size(160, 26);
+            this.dateBeafor.Size = new System.Drawing.Size(233, 22);
             this.dateBeafor.TabIndex = 13;
             this.dateBeafor.ValueChanged += new System.EventHandler(this.dateBeafor_ValueChanged);
             // 
@@ -142,9 +138,9 @@ namespace RTIPPO
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(626, 391);
+            this.label6.Location = new System.Drawing.Point(556, 309);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 22);
+            this.label6.Size = new System.Drawing.Size(27, 18);
             this.label6.TabIndex = 14;
             this.label6.Text = "От";
             // 
@@ -152,19 +148,18 @@ namespace RTIPPO
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(626, 440);
+            this.label7.Location = new System.Drawing.Point(556, 351);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 22);
+            this.label7.Size = new System.Drawing.Size(29, 18);
             this.label7.TabIndex = 15;
             this.label7.Text = "До";
             // 
             // buttonSubmit
             // 
             this.buttonSubmit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonSubmit.Location = new System.Drawing.Point(627, 504);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonSubmit.Location = new System.Drawing.Point(557, 403);
             this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(268, 39);
+            this.buttonSubmit.Size = new System.Drawing.Size(270, 31);
             this.buttonSubmit.TabIndex = 16;
             this.buttonSubmit.Text = "Применить";
             this.buttonSubmit.UseVisualStyleBackColor = false;
@@ -172,40 +167,38 @@ namespace RTIPPO
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buttonLayut,
             this.myRecords});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(938, 36);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(859, 28);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // buttonLayut
             // 
             this.buttonLayut.Name = "buttonLayut";
-            this.buttonLayut.Size = new System.Drawing.Size(80, 29);
+            this.buttonLayut.Size = new System.Drawing.Size(67, 24);
             this.buttonLayut.Text = "Выход";
             this.buttonLayut.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // myRecords
             // 
             this.myRecords.Name = "myRecords";
-            this.myRecords.Size = new System.Drawing.Size(168, 29);
+            this.myRecords.Size = new System.Drawing.Size(143, 24);
             this.myRecords.Text = "Мои объявления";
             // 
             // dataGridMissing
             // 
             this.dataGridMissing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMissing.Location = new System.Drawing.Point(14, 178);
-            this.dataGridMissing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridMissing.Location = new System.Drawing.Point(12, 142);
             this.dataGridMissing.Name = "dataGridMissing";
             this.dataGridMissing.RowHeadersWidth = 51;
             this.dataGridMissing.RowTemplate.Height = 24;
-            this.dataGridMissing.Size = new System.Drawing.Size(603, 365);
+            this.dataGridMissing.Size = new System.Drawing.Size(536, 292);
             this.dataGridMissing.TabIndex = 2;
             this.dataGridMissing.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMissing_CellContentClick);
             // 
@@ -214,10 +207,9 @@ namespace RTIPPO
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Все"});
-            this.comboBox2.Location = new System.Drawing.Point(726, 178);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox2.Location = new System.Drawing.Point(657, 142);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(168, 28);
+            this.comboBox2.Size = new System.Drawing.Size(170, 24);
             this.comboBox2.TabIndex = 18;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -225,9 +217,9 @@ namespace RTIPPO
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(626, 339);
+            this.label8.Location = new System.Drawing.Point(556, 271);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 22);
+            this.label8.Size = new System.Drawing.Size(52, 18);
             this.label8.TabIndex = 10;
             this.label8.Text = "Дата:";
             // 
@@ -236,10 +228,9 @@ namespace RTIPPO
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Все"});
-            this.comboBox3.Location = new System.Drawing.Point(726, 276);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox3.Location = new System.Drawing.Point(657, 221);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(168, 28);
+            this.comboBox3.Size = new System.Drawing.Size(170, 24);
             this.comboBox3.TabIndex = 19;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -247,18 +238,17 @@ namespace RTIPPO
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(623, 276);
+            this.label2.Location = new System.Drawing.Point(554, 221);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 22);
+            this.label2.Size = new System.Drawing.Size(45, 18);
             this.label2.TabIndex = 20;
             this.label2.Text = "Пол:";
             // 
             // dateSortButton
             // 
-            this.dateSortButton.Location = new System.Drawing.Point(12, 129);
-            this.dateSortButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateSortButton.Location = new System.Drawing.Point(11, 103);
             this.dateSortButton.Name = "dateSortButton";
-            this.dateSortButton.Size = new System.Drawing.Size(83, 41);
+            this.dateSortButton.Size = new System.Drawing.Size(74, 33);
             this.dateSortButton.TabIndex = 21;
             this.dateSortButton.Text = "Дата ↓";
             this.dateSortButton.UseVisualStyleBackColor = true;
@@ -266,10 +256,9 @@ namespace RTIPPO
             // 
             // nameSortButton
             // 
-            this.nameSortButton.Location = new System.Drawing.Point(102, 129);
-            this.nameSortButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameSortButton.Location = new System.Drawing.Point(91, 103);
             this.nameSortButton.Name = "nameSortButton";
-            this.nameSortButton.Size = new System.Drawing.Size(96, 41);
+            this.nameSortButton.Size = new System.Drawing.Size(85, 33);
             this.nameSortButton.TabIndex = 22;
             this.nameSortButton.Text = "Кличка ↓";
             this.nameSortButton.UseVisualStyleBackColor = true;
@@ -277,10 +266,9 @@ namespace RTIPPO
             // 
             // categorySortButton
             // 
-            this.categorySortButton.Location = new System.Drawing.Point(205, 129);
-            this.categorySortButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.categorySortButton.Location = new System.Drawing.Point(182, 103);
             this.categorySortButton.Name = "categorySortButton";
-            this.categorySortButton.Size = new System.Drawing.Size(112, 41);
+            this.categorySortButton.Size = new System.Drawing.Size(100, 33);
             this.categorySortButton.TabIndex = 23;
             this.categorySortButton.Text = "Категория ↓";
             this.categorySortButton.UseVisualStyleBackColor = true;
@@ -288,10 +276,9 @@ namespace RTIPPO
             // 
             // genderSortButton
             // 
-            this.genderSortButton.Location = new System.Drawing.Point(324, 129);
-            this.genderSortButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.genderSortButton.Location = new System.Drawing.Point(288, 103);
             this.genderSortButton.Name = "genderSortButton";
-            this.genderSortButton.Size = new System.Drawing.Size(62, 41);
+            this.genderSortButton.Size = new System.Drawing.Size(55, 33);
             this.genderSortButton.TabIndex = 24;
             this.genderSortButton.Text = "Пол ↓";
             this.genderSortButton.UseVisualStyleBackColor = true;
@@ -299,10 +286,9 @@ namespace RTIPPO
             // 
             // userSortButton
             // 
-            this.userSortButton.Location = new System.Drawing.Point(393, 129);
-            this.userSortButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userSortButton.Location = new System.Drawing.Point(349, 103);
             this.userSortButton.Name = "userSortButton";
-            this.userSortButton.Size = new System.Drawing.Size(141, 41);
+            this.userSortButton.Size = new System.Drawing.Size(125, 33);
             this.userSortButton.TabIndex = 25;
             this.userSortButton.Text = "Пользователь ↓";
             this.userSortButton.UseVisualStyleBackColor = true;
@@ -310,10 +296,9 @@ namespace RTIPPO
             // 
             // locationSortButton
             // 
-            this.locationSortButton.Location = new System.Drawing.Point(540, 129);
-            this.locationSortButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.locationSortButton.Location = new System.Drawing.Point(480, 103);
             this.locationSortButton.Name = "locationSortButton";
-            this.locationSortButton.Size = new System.Drawing.Size(76, 41);
+            this.locationSortButton.Size = new System.Drawing.Size(68, 33);
             this.locationSortButton.TabIndex = 26;
             this.locationSortButton.Text = "Город ↓";
             this.locationSortButton.UseVisualStyleBackColor = true;
@@ -321,9 +306,10 @@ namespace RTIPPO
             // 
             // nextPageButton
             // 
-            this.nextPageButton.Location = new System.Drawing.Point(69, 52);
+            this.nextPageButton.Location = new System.Drawing.Point(61, 42);
+            this.nextPageButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nextPageButton.Name = "nextPageButton";
-            this.nextPageButton.Size = new System.Drawing.Size(30, 26);
+            this.nextPageButton.Size = new System.Drawing.Size(27, 29);
             this.nextPageButton.TabIndex = 27;
             this.nextPageButton.Text = ">";
             this.nextPageButton.UseVisualStyleBackColor = true;
@@ -331,9 +317,10 @@ namespace RTIPPO
             // 
             // backPageButton
             // 
-            this.backPageButton.Location = new System.Drawing.Point(11, 52);
+            this.backPageButton.Location = new System.Drawing.Point(10, 42);
+            this.backPageButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backPageButton.Name = "backPageButton";
-            this.backPageButton.Size = new System.Drawing.Size(30, 26);
+            this.backPageButton.Size = new System.Drawing.Size(27, 29);
             this.backPageButton.TabIndex = 28;
             this.backPageButton.Text = "<";
             this.backPageButton.UseVisualStyleBackColor = true;
@@ -343,7 +330,7 @@ namespace RTIPPO
             // 
             this.labelPage.AutoSize = true;
             this.labelPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelPage.Location = new System.Drawing.Point(45, 54);
+            this.labelPage.Location = new System.Drawing.Point(40, 43);
             this.labelPage.Name = "labelPage";
             this.labelPage.Size = new System.Drawing.Size(18, 20);
             this.labelPage.TabIndex = 29;
@@ -352,9 +339,9 @@ namespace RTIPPO
             // 
             // BulletinBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 470);
+            this.ClientSize = new System.Drawing.Size(859, 458);
             this.Controls.Add(this.labelPage);
             this.Controls.Add(this.backPageButton);
             this.Controls.Add(this.nextPageButton);
@@ -380,7 +367,6 @@ namespace RTIPPO
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ButtonPlace);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BulletinBoard";
             this.Text = "BulletinBoard";
             this.Load += new System.EventHandler(this.BulletinBoard_Load);
