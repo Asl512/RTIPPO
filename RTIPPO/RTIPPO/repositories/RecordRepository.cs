@@ -11,7 +11,7 @@ namespace RTIPPO.repositories
     {
         public DataTable getRecords(Sorting dateSort = Sorting.not, Sorting nameSort = Sorting.not, Sorting genderSort = Sorting.not, 
             Sorting locationSort = Sorting.not, Sorting userSort = Sorting.not, Sorting categorySort = Sorting.not, ColumnSort lastColumnSort = ColumnSort.not,
-            string location = null, string category = null, string gender = null, string dateFrom = null, string dateBeafor = null)
+            string location = null, string category = null, string gender = null, string dateFrom = null, string dateBeafor = null, int offset = 0)
         {
 
             DataBase db = new DataBase(
@@ -28,7 +28,9 @@ namespace RTIPPO.repositories
                 "INNER JOIN category ON category.id = animals.id_category " +
                 "INNER JOIN gender ON gender.id = animals.id_gender " +
                 getWhere(location:location, category:category, gender: gender,dateFrom: dateFrom,dateBeafor: dateBeafor) +
-                getOrder(dateSort: dateSort, nameSort: nameSort, genderSort: genderSort, locationSort: locationSort, userSort: userSort, categorySort: categorySort, lastColumnSort: lastColumnSort)
+                getOrder(dateSort: dateSort, nameSort: nameSort, genderSort: genderSort, locationSort: locationSort, userSort: userSort, categorySort: categorySort, lastColumnSort: lastColumnSort) +
+                "LIMIT 2" +
+                "OFFSET " + offset
                 );
             return db.data;
         }

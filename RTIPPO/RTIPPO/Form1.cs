@@ -35,6 +35,9 @@ namespace RTIPPO
         public bool auth;
         UserRepository userRepository;
         RecordRepository recordsRepository;
+        private int page = 0;
+        private int offset = 0;
+
         private string location;
         private string category;
         private string gender;
@@ -52,6 +55,7 @@ namespace RTIPPO
         public BulletinBoard(UserRepository userRepository)
         {
             InitializeComponent();
+            labelPage.Text = page.ToString();
 
             dateSortButton.Text = "Дата";
             nameSortButton.Text = "Кличка";
@@ -143,7 +147,7 @@ namespace RTIPPO
         {
             dataGridMissing.DataSource = recordsRepository.getRecords(location: location, category: category, gender: gender,
                 dateFrom: dateFromValue, dateBeafor:dateBeaforValue, dateSort: dateSort, nameSort: nameSort, genderSort: genderSort,
-                locationSort: locationSort, userSort: userSort, categorySort: categorySort, lastColumnSort: lastColumnSort);
+                locationSort: locationSort, userSort: userSort, categorySort: categorySort, lastColumnSort: lastColumnSort, offset: offset);
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -156,16 +160,6 @@ namespace RTIPPO
 
         private void dataGridMissing_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*int row = e.RowIndex;
-            var name = (String)dataGridMissing[0, row].Value;
-            var category = (String)dataGridMissing[1, row].Value;
-            var gender = (String)dataGridMissing[2, row].Value;
-            var location = (String)dataGridMissing[3,row].Value;
-            var date = (String)dataGridMissing[4,row].Value;
-
-            Form4 form4 = new Form4(name, gender, location, date, category);
-            form4.ShowDialog();
-            this.Hide();*/
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -286,6 +280,30 @@ namespace RTIPPO
                 locationSortButton.Text = "Город↓";
             }
             submitRecord();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nextPageButton_Click(object sender, EventArgs e)
+        {
+            page++;
+            labelPage.Text = page.ToString();
+            offset += 2;
+            submitRecord();
+        }
+
+        private void backPageButton_Click(object sender, EventArgs e)
+        {
+            if(page > 0)
+            {
+                page--;
+                offset -= 2;
+                labelPage.Text = page.ToString();
+                submitRecord();
+            }
         }
     }
 }

@@ -53,6 +53,9 @@ namespace RTIPPO
             this.genderSortButton = new System.Windows.Forms.Button();
             this.userSortButton = new System.Windows.Forms.Button();
             this.locationSortButton = new System.Windows.Forms.Button();
+            this.nextPageButton = new System.Windows.Forms.Button();
+            this.backPageButton = new System.Windows.Forms.Button();
+            this.labelPage = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMissing)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +66,7 @@ namespace RTIPPO
             this.ButtonPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ButtonPlace.ForeColor = System.Drawing.Color.Snow;
-            this.ButtonPlace.Location = new System.Drawing.Point(599, 38);
+            this.ButtonPlace.Location = new System.Drawing.Point(599, 49);
             this.ButtonPlace.Name = "ButtonPlace";
             this.ButtonPlace.Size = new System.Drawing.Size(206, 33);
             this.ButtonPlace.TabIndex = 0;
@@ -74,10 +77,10 @@ namespace RTIPPO
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F);
-            this.label1.Location = new System.Drawing.Point(26, 38);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Location = new System.Drawing.Point(112, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(557, 44);
+            this.label1.Size = new System.Drawing.Size(481, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "Доска объявлений о находке";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -154,7 +157,7 @@ namespace RTIPPO
             // buttonSubmit
             // 
             this.buttonSubmit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonSubmit.Location = new System.Drawing.Point(557, 403);
+            this.buttonSubmit.Location = new System.Drawing.Point(559, 403);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(238, 31);
             this.buttonSubmit.TabIndex = 16;
@@ -300,11 +303,45 @@ namespace RTIPPO
             this.locationSortButton.UseVisualStyleBackColor = true;
             this.locationSortButton.Click += new System.EventHandler(this.locationSortButton_Click);
             // 
+            // nextPageButton
+            // 
+            this.nextPageButton.Location = new System.Drawing.Point(69, 52);
+            this.nextPageButton.Name = "nextPageButton";
+            this.nextPageButton.Size = new System.Drawing.Size(30, 26);
+            this.nextPageButton.TabIndex = 27;
+            this.nextPageButton.Text = ">";
+            this.nextPageButton.UseVisualStyleBackColor = true;
+            this.nextPageButton.Click += new System.EventHandler(this.nextPageButton_Click);
+            // 
+            // backPageButton
+            // 
+            this.backPageButton.Location = new System.Drawing.Point(11, 52);
+            this.backPageButton.Name = "backPageButton";
+            this.backPageButton.Size = new System.Drawing.Size(30, 26);
+            this.backPageButton.TabIndex = 28;
+            this.backPageButton.Text = "<";
+            this.backPageButton.UseVisualStyleBackColor = true;
+            this.backPageButton.Click += new System.EventHandler(this.backPageButton_Click);
+            // 
+            // labelPage
+            // 
+            this.labelPage.AutoSize = true;
+            this.labelPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelPage.Location = new System.Drawing.Point(45, 54);
+            this.labelPage.Name = "labelPage";
+            this.labelPage.Size = new System.Drawing.Size(18, 20);
+            this.labelPage.TabIndex = 29;
+            this.labelPage.Text = "0";
+            this.labelPage.Click += new System.EventHandler(this.label3_Click);
+            // 
             // BulletinBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 470);
+            this.Controls.Add(this.labelPage);
+            this.Controls.Add(this.backPageButton);
+            this.Controls.Add(this.nextPageButton);
             this.Controls.Add(this.locationSortButton);
             this.Controls.Add(this.userSortButton);
             this.Controls.Add(this.genderSortButton);
@@ -364,6 +401,9 @@ namespace RTIPPO
         private System.Windows.Forms.Button genderSortButton;
         private System.Windows.Forms.Button userSortButton;
         private System.Windows.Forms.Button locationSortButton;
+        private System.Windows.Forms.Button nextPageButton;
+        private System.Windows.Forms.Button backPageButton;
+        private System.Windows.Forms.Label labelPage;
     }
 }
 
