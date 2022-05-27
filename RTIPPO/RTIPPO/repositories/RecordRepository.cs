@@ -15,7 +15,8 @@ namespace RTIPPO.repositories
         {
 
             DataBase db = new DataBase(
-                "SELECT date AS Дата, " +
+                "SELECT records.id AS Номер, " +
+                "date AS Дата, " +
                 "animals.name AS Кличка, " +
                 "category.name AS Категория, " +
                 "gender.name AS Пол," +
