@@ -46,11 +46,11 @@ namespace RTIPPO
                 {
                     location = Int32.Parse(cells[0].ToString());
                 }
-                else 
+                /*else 
                 {
                     location++;
-                }
-            }
+                }*/
+            } 
             string status = userRepository.registration(loginBoxR.Text, passwordBoxR.Text, location);
             if (status =="") 
             {
