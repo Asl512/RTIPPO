@@ -160,9 +160,11 @@ namespace RTIPPO
 
         private void dataGridMissing_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string index = dataGridMissing.SelectedCells[0].Value.ToString();
+            Form4 form4 = new Form4(index);
+            form4.ShowDialog();
         }
-
+        
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 

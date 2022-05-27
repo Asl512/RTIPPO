@@ -7,26 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RTIPPO.repositories;
 
 namespace RTIPPO
 {
     public partial class Form4 : Form
     {
-        //readonly DataBase db = new DataBase("select * from users");
+        private DataTable record;
 
-        public Form4(string name, string gender, string location, string date, string category)
+        public Form4(string index)
         {
+
             InitializeComponent();
-            //this.name = name;
-            //this.gender = gender;
-            //this.location = location;
-            //this.date = date;
-            //this.category = category;
-            nameText.Text = name;
-            genderText.Text = gender;
-            locationText.Text = location;
-            dateText.Text = date;
-            categoryText.Text = category;
+            RecordRepository record = new RecordRepository();
+            this.record = record.getOne(index);
+            DataRow animal = this.record.Rows[0];
+            categoryText.Text = animal.ItemArray[2].ToString();
+            nameText.Text = animal.ItemArray[1].ToString();
+            genderText.Text = animal.ItemArray[3].ToString();
+            locationText.Text = animal.ItemArray[4].ToString();
+            dateText.Text = animal.ItemArray[0].ToString().Substring(0, animal.ItemArray[0].ToString().Length - 8);
+            pictureBox1.ImageLocation = animal.ItemArray[5].ToString();
         }
 
         private void Form4_Load(object sender, EventArgs e)
@@ -47,11 +48,6 @@ namespace RTIPPO
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
