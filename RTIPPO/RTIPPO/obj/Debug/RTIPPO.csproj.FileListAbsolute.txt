@@ -96,12 +96,12 @@ C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\bin\Debug\System.Value
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.AssemblyReference.cache
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.SuggestedBindingRedirects.cache
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.BulletinBoard.resources
-C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Authorization.resources
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Registration.resources
-C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Form4.resources
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.Properties.Resources.resources
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.GenerateResource.cache
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.CoreCompileInputs.cache
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.csproj.CopyComplete
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.exe
 C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.pdb
+C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.AuthForm.resources
+C:\Users\Алина\Documents\GitHub\RTIPPO\RTIPPO\RTIPPO\obj\Debug\RTIPPO.CardForm.resources

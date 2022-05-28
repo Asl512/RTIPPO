@@ -35,6 +35,10 @@ namespace RTIPPO.repositories
 
         public string registration(string login, string password, int location)
         {
+            if (location == -1)
+            {
+                return "Выберите город";
+            }
             if (login == "" || password == "")
             {
                 return "Введите логин и пароль";

@@ -8,32 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RTIPPO.repositories;
 
 namespace RTIPPO
 {
-    public partial class Authorization : Form
+    public partial class AuthForm : Form
     {
         UserRepository userRepository;
-        public Authorization()
+        public AuthForm()
         {
             InitializeComponent();
             userRepository = new UserRepository();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -29,74 +29,73 @@ namespace RTIPPO
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.loginBoxR = new System.Windows.Forms.TextBox();
-            this.passwordBoxR = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.saveR = new System.Windows.Forms.Button();
+            this.labelReg = new System.Windows.Forms.Label();
+            this.loginBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.labLog = new System.Windows.Forms.Label();
+            this.labPas = new System.Windows.Forms.Label();
+            this.saveReg = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labLocation = new System.Windows.Forms.Label();
+            this.comboBoxLocation = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // label1
+            // labelReg
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(263, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Регистрация";
+            this.labelReg.AutoSize = true;
+            this.labelReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.labelReg.Location = new System.Drawing.Point(263, 28);
+            this.labelReg.Name = "labelReg";
+            this.labelReg.Size = new System.Drawing.Size(259, 46);
+            this.labelReg.TabIndex = 0;
+            this.labelReg.Text = "Регистрация";
             // 
-            // loginBoxR
+            // loginBox
             // 
-            this.loginBoxR.BackColor = System.Drawing.Color.SeaShell;
-            this.loginBoxR.Location = new System.Drawing.Point(284, 211);
-            this.loginBoxR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.loginBoxR.Name = "loginBoxR";
-            this.loginBoxR.Size = new System.Drawing.Size(216, 26);
-            this.loginBoxR.TabIndex = 1;
+            this.loginBox.BackColor = System.Drawing.Color.SeaShell;
+            this.loginBox.Location = new System.Drawing.Point(284, 211);
+            this.loginBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loginBox.Name = "loginBox";
+            this.loginBox.Size = new System.Drawing.Size(216, 26);
+            this.loginBox.TabIndex = 1;
             // 
-            // passwordBoxR
+            // passwordBox
             // 
-            this.passwordBoxR.BackColor = System.Drawing.Color.SeaShell;
-            this.passwordBoxR.Location = new System.Drawing.Point(284, 288);
-            this.passwordBoxR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.passwordBoxR.Name = "passwordBoxR";
-            this.passwordBoxR.Size = new System.Drawing.Size(216, 26);
-            this.passwordBoxR.TabIndex = 2;
+            this.passwordBox.BackColor = System.Drawing.Color.SeaShell;
+            this.passwordBox.Location = new System.Drawing.Point(284, 288);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(216, 26);
+            this.passwordBox.TabIndex = 2;
             // 
-            // label2
+            // labLog
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(294, 185);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Логин";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labLog.AutoSize = true;
+            this.labLog.Location = new System.Drawing.Point(294, 185);
+            this.labLog.Name = "labLog";
+            this.labLog.Size = new System.Drawing.Size(55, 20);
+            this.labLog.TabIndex = 3;
+            this.labLog.Text = "Логин";
             // 
-            // label3
+            // labPas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(294, 265);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Пароль";
+            this.labPas.AutoSize = true;
+            this.labPas.Location = new System.Drawing.Point(294, 265);
+            this.labPas.Name = "labPas";
+            this.labPas.Size = new System.Drawing.Size(67, 20);
+            this.labPas.TabIndex = 4;
+            this.labPas.Text = "Пароль";
             // 
-            // saveR
+            // saveReg
             // 
-            this.saveR.Location = new System.Drawing.Point(395, 349);
-            this.saveR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.saveR.Name = "saveR";
-            this.saveR.Size = new System.Drawing.Size(104, 32);
-            this.saveR.TabIndex = 5;
-            this.saveR.Text = "Сохранить";
-            this.saveR.UseVisualStyleBackColor = true;
-            this.saveR.Click += new System.EventHandler(this.button1_Click);
+            this.saveReg.Location = new System.Drawing.Point(395, 349);
+            this.saveReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveReg.Name = "saveReg";
+            this.saveReg.Size = new System.Drawing.Size(104, 32);
+            this.saveReg.TabIndex = 5;
+            this.saveReg.Text = "Сохранить";
+            this.saveReg.UseVisualStyleBackColor = true;
+            this.saveReg.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonBack
             // 
@@ -110,22 +109,22 @@ namespace RTIPPO
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // label4
+            // labLocation
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(294, 102);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Город";
+            this.labLocation.AutoSize = true;
+            this.labLocation.Location = new System.Drawing.Point(294, 102);
+            this.labLocation.Name = "labLocation";
+            this.labLocation.Size = new System.Drawing.Size(56, 20);
+            this.labLocation.TabIndex = 8;
+            this.labLocation.Text = "Город";
             // 
-            // comboBox1
+            // comboBoxLocation
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(284, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 28);
-            this.comboBox1.TabIndex = 9;
+            this.comboBoxLocation.FormattingEnabled = true;
+            this.comboBoxLocation.Location = new System.Drawing.Point(284, 136);
+            this.comboBoxLocation.Name = "comboBoxLocation";
+            this.comboBoxLocation.Size = new System.Drawing.Size(215, 28);
+            this.comboBoxLocation.TabIndex = 9;
             // 
             // Registration
             // 
@@ -133,20 +132,19 @@ namespace RTIPPO
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxLocation);
+            this.Controls.Add(this.labLocation);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.saveR);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.passwordBoxR);
-            this.Controls.Add(this.loginBoxR);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.saveReg);
+            this.Controls.Add(this.labPas);
+            this.Controls.Add(this.labLog);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.loginBox);
+            this.Controls.Add(this.labelReg);
             this.ForeColor = System.Drawing.Color.Maroon;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Registration";
-            this.Text = "Registration";
-            this.Load += new System.EventHandler(this.Registration_Load);
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,14 +152,14 @@ namespace RTIPPO
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox loginBoxR;
-        private System.Windows.Forms.TextBox passwordBoxR;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button saveR;
+        private System.Windows.Forms.Label labelReg;
+        private System.Windows.Forms.TextBox loginBox;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.Label labLog;
+        private System.Windows.Forms.Label labPas;
+        private System.Windows.Forms.Button saveReg;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label labLocation;
+        private System.Windows.Forms.ComboBox comboBoxLocation;
     }
 }

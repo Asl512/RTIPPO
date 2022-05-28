@@ -11,11 +11,11 @@ using RTIPPO.repositories;
 
 namespace RTIPPO
 {
-    public partial class Form4 : Form
+    public partial class CardForm : Form
     {
         private DataTable record;
 
-        public Form4(string index)
+        public CardForm(string index)
         {
 
             InitializeComponent();
@@ -27,27 +27,7 @@ namespace RTIPPO
             genderText.Text = animal.ItemArray[3].ToString();
             locationText.Text = animal.ItemArray[4].ToString();
             dateText.Text = animal.ItemArray[0].ToString().Substring(0, animal.ItemArray[0].ToString().Length - 8);
-            pictureBox1.ImageLocation = animal.ItemArray[5].ToString();
-        }
-
-        private void Form4_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
+            animalPhoto.ImageLocation = animal.ItemArray[5].ToString();
         }
     }
 }

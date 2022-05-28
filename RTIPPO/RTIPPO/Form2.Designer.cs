@@ -1,7 +1,7 @@
 ﻿
 namespace RTIPPO
 {
-    partial class Authorization
+    partial class AuthForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,137 +29,137 @@ namespace RTIPPO
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labAuth = new System.Windows.Forms.Label();
             this.b = new System.ComponentModel.BackgroundWorker();
-            this.buttonRegistrion = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonReg = new System.Windows.Forms.Button();
+            this.buttonOpen = new System.Windows.Forms.Button();
             this.textLogin = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.labelLogin = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.menuStripAuth = new System.Windows.Forms.MenuStrip();
             this.доскаОбъявленийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.menuStripAuth.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // labAuth
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(239, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Авторизация";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labAuth.AutoSize = true;
+            this.labAuth.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.labAuth.ForeColor = System.Drawing.Color.Maroon;
+            this.labAuth.Location = new System.Drawing.Point(269, 59);
+            this.labAuth.Name = "labAuth";
+            this.labAuth.Size = new System.Drawing.Size(261, 46);
+            this.labAuth.TabIndex = 0;
+            this.labAuth.Text = "Авторизация";
             // 
-            // buttonRegistrion
+            // buttonReg
             // 
-            this.buttonRegistrion.BackColor = System.Drawing.Color.SeaShell;
-            this.buttonRegistrion.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonRegistrion.Location = new System.Drawing.Point(125, 252);
-            this.buttonRegistrion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonRegistrion.Name = "buttonRegistrion";
-            this.buttonRegistrion.Size = new System.Drawing.Size(172, 41);
-            this.buttonRegistrion.TabIndex = 1;
-            this.buttonRegistrion.Text = "Зарегистрироваться";
-            this.buttonRegistrion.UseVisualStyleBackColor = false;
-            this.buttonRegistrion.Click += new System.EventHandler(this.button1_Click);
+            this.buttonReg.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonReg.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonReg.Location = new System.Drawing.Point(141, 315);
+            this.buttonReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonReg.Name = "buttonReg";
+            this.buttonReg.Size = new System.Drawing.Size(194, 51);
+            this.buttonReg.TabIndex = 1;
+            this.buttonReg.Text = "Зарегистрироваться";
+            this.buttonReg.UseVisualStyleBackColor = false;
+            this.buttonReg.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonOpen
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaShell;
-            this.button2.ForeColor = System.Drawing.Color.Maroon;
-            this.button2.Location = new System.Drawing.Point(409, 252);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 41);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Войти";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonOpen.BackColor = System.Drawing.Color.SeaShell;
+            this.buttonOpen.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonOpen.Location = new System.Drawing.Point(460, 315);
+            this.buttonOpen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonOpen.Name = "buttonOpen";
+            this.buttonOpen.Size = new System.Drawing.Size(155, 51);
+            this.buttonOpen.TabIndex = 2;
+            this.buttonOpen.Text = "Войти";
+            this.buttonOpen.UseVisualStyleBackColor = false;
+            this.buttonOpen.Click += new System.EventHandler(this.button2_Click);
             // 
             // textLogin
             // 
             this.textLogin.BackColor = System.Drawing.Color.SeaShell;
             this.textLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textLogin.Location = new System.Drawing.Point(262, 136);
+            this.textLogin.Location = new System.Drawing.Point(295, 170);
             this.textLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textLogin.Name = "textLogin";
-            this.textLogin.Size = new System.Drawing.Size(179, 26);
+            this.textLogin.Size = new System.Drawing.Size(201, 30);
             this.textLogin.TabIndex = 3;
-            this.textLogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+
             // 
             // textPassword
             // 
             this.textPassword.BackColor = System.Drawing.Color.SeaShell;
             this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textPassword.Location = new System.Drawing.Point(262, 192);
+            this.textPassword.Location = new System.Drawing.Point(295, 240);
             this.textPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(179, 26);
+            this.textPassword.Size = new System.Drawing.Size(201, 30);
             this.textPassword.TabIndex = 4;
             // 
-            // label2
+            // labelLogin
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(286, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Логин";
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.ForeColor = System.Drawing.Color.Maroon;
+            this.labelLogin.Location = new System.Drawing.Point(322, 144);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(55, 20);
+            this.labelLogin.TabIndex = 5;
+            this.labelLogin.Text = "Логин";
             // 
-            // label3
+            // labelPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Maroon;
-            this.label3.Location = new System.Drawing.Point(286, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Пароль";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.ForeColor = System.Drawing.Color.Maroon;
+            this.labelPassword.Location = new System.Drawing.Point(322, 218);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(67, 20);
+            this.labelPassword.TabIndex = 6;
+            this.labelPassword.Text = "Пароль";
             // 
-            // menuStrip1
+            // menuStripAuth
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripAuth.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStripAuth.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStripAuth.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.доскаОбъявленийToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(711, 28);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripAuth.Location = new System.Drawing.Point(0, 0);
+            this.menuStripAuth.Name = "menuStripAuth";
+            this.menuStripAuth.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStripAuth.Size = new System.Drawing.Size(800, 33);
+            this.menuStripAuth.TabIndex = 7;
+            this.menuStripAuth.Text = "menuStrip1";
             // 
             // доскаОбъявленийToolStripMenuItem
             // 
             this.доскаОбъявленийToolStripMenuItem.Name = "доскаОбъявленийToolStripMenuItem";
-            this.доскаОбъявленийToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
+            this.доскаОбъявленийToolStripMenuItem.Size = new System.Drawing.Size(181, 29);
             this.доскаОбъявленийToolStripMenuItem.Text = "Доска объявлений";
             this.доскаОбъявленийToolStripMenuItem.Click += new System.EventHandler(this.доскаОбъявленийToolStripMenuItem_Click);
             // 
-            // Authorization
+            // AuthForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(711, 360);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textLogin);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonRegistrion);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.buttonOpen);
+            this.Controls.Add(this.buttonReg);
+            this.Controls.Add(this.labAuth);
+            this.Controls.Add(this.menuStripAuth);
+            this.MainMenuStrip = this.menuStripAuth;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Authorization";
-            this.Text = "Authorization";
-            this.Load += new System.EventHandler(this.Form2_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Name = "AuthForm";
+            this.Text = "Авторизация";
+            this.menuStripAuth.ResumeLayout(false);
+            this.menuStripAuth.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,15 +167,15 @@ namespace RTIPPO
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labAuth;
         private System.ComponentModel.BackgroundWorker b;
-        private System.Windows.Forms.Button buttonRegistrion;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonReg;
+        private System.Windows.Forms.Button buttonOpen;
         private System.Windows.Forms.TextBox textLogin;
         private System.Windows.Forms.TextBox textPassword;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.MenuStrip menuStripAuth;
         private System.Windows.Forms.ToolStripMenuItem доскаОбъявленийToolStripMenuItem;
     }
 }

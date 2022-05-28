@@ -107,7 +107,7 @@ namespace RTIPPO
         {
             if (!auth)
             {
-                Authorization formAuthorization = new Authorization();
+                AuthForm formAuthorization = new AuthForm();
                 formAuthorization.Show();
                 this.Hide();
             }
@@ -152,7 +152,7 @@ namespace RTIPPO
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Authorization formAuthorization = new Authorization();
+            AuthForm formAuthorization = new AuthForm();
             formAuthorization.Show();
             userRepository.logout();
             this.Hide();
@@ -161,7 +161,7 @@ namespace RTIPPO
         private void dataGridMissing_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string index = dataGridMissing.SelectedCells[0].Value.ToString();
-            Form4 form4 = new Form4(index);
+            CardForm form4 = new CardForm(index);
             form4.ShowDialog();
         }
         

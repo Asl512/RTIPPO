@@ -95,7 +95,7 @@ namespace RTIPPO.repositories
             string order = "";
             if(orderList.Count > 0)
             {
-                order += "ORDER BY " + String.Join(", ", orderList.ToArray());
+                order += "ORDER BY " + String.Join(", ", orderList.ToArray())+" ";
             }
             Console.WriteLine(order);
 
